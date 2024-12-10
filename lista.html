@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Raleway:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/lista.css">
+    <link rel="stylesheet" href="css/lista.dark.css">
+    <link rel="shortcut icon" href="img/logo3.png">
+    <script defer src="js/lista.js"></script>
+    <title>Lista</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+<body>
+    <style>
+        :root {
+        --cor-primaria: #00ccff;
+        --cor-secundaria: #ff6600;
+        --cor-fundo: #1a1a1d; 
+        --cor-destaque: #ff00ff; 
+        --cor-texto: #ffffff; 
+        --cor-hover: rgba(255, 255, 255, 0.3); 
+        --cor-borda: #ffcc00; 
+        --gradiente-fundo: linear-gradient(135deg, #1a1a1d, #222831);
+    }
+    
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+    
+        body{
+            font-family: 'Press Start 2P', cursive;
+            background: var(--gradiente-fundo);
+            color: var(--cor-texto);
+            height: 100%;
+            width: 100%;
+        }
+    
+    
+        /* Cabecalho */
+        header {
+            width: 100%;
+            background: var(--cor-fundo);
+            padding: 20px 0;
+            box-shadow: 0px 4px 10px var(--cor-primaria);
+            border-bottom: 3px solid var(--cor-borda);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+    
+        header .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+    
+        header .logo {
+            font-size: 1.5rem;
+            color: var(--cor-primaria);
+            text-shadow: 0px 2px 5px var(--cor-destaque);
+            transition: 0.3s ease-in-out;
+        }
+    
+        header .logo:hover {
+            transform: scale(1.1) rotate(-5deg);
+        }
+    
+        header nav ul {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+    
+        header nav ul li {
+            margin: 0 15px;
+            position: relative;
+        }
+    
+        header nav ul li a {
+            text-decoration: none;
+            color: var(--cor-texto);
+            text-transform: uppercase;
+            transition: 0.3s ease;
+        }
+    
+        header nav ul li a:hover {
+            color: var(--cor-secundaria);
+            transform: scale(1.1);
+        }
+    
+        header nav ul li a::after {
+            content: '';
+            display: block;
+            width: 0;
+            height: 2px;
+            background: var(--cor-secundaria);
+            transition: width 0.3s ease-in-out;
+            margin: auto;
+        }
+    
+        header nav ul li a:hover::after {
+            width: 100%;
+        }
+
+    </style>
+    <!-- Cabecalho -->
+    <header id="header">
+        <div class="container">
+            <div class="logo">Nexium</div>
+            <nav>
+                <ul>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="sobre.html">Quem Somos</a></li>
+                    <li><a href="jogos.html">Jogos</a></li>
+                    <li><a href="contato.html">Contatos</a></li>
+                    <li><a href="eventos.html">Eventos</a></li>
+                    <li><a href="lista.html">Minha Lista</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+            <!-- Carrossel -->
+            <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img src="img/bannerdegames1.png" class="d-block w-100" alt="...">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="img/bannerdegames2.png" class="d-block w-100" alt="...">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="img/bannerdegames3.png" class="d-block w-100" alt="...">
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+        <!--Navegação-->
+        <div id="divid">
+            <button class="button"><a href="#valores">Nossos Valores</a></button>
+            <button class="button"><a href="#objetivos">Lançamentos</a></button>
+        </div>
+
+        <!-- Modo escuro -->
+        <i onclick="Modo_escuro()" class="bi bi-brightness-high-fill" id="idicon"><svg xmlns="http://www.w3.org/2000/svg" width="70" height="70" fill="currentColor" class="bi bi-brightness-high-fill" viewBox="0 0 16 16">
+            <path d="M12 8a4 4 0 1 1-8 0 4 4 0 0 1 8 0M8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0m0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13m8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5M3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8m10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0m-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0m9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707M4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708"/>
+          </svg></i>
+
+          <!--Nossas consultorias-->
+        <section>
+            <h2>Nossas Consultorias</h2>
+            <div class="divinlinecenter">
+                <div class="quadrado">
+                    <img src="img/Contos_dos_irmaos_grimm.jpg" alt="">
+                    <div><h3>O Conto Dos Irmãos Grimm</h3></div>
+                    <div><p>Uma coletânea de contos de fadas.</p></div>
+                    <div><button class="buttonquad"><a href="https://www.amazon.com.br/Contos-Irm%C3%A3os-Grimm-Clarissa-Pinkola/dp/8532519040/ref=sr_1_2?__mk_pt_BR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=31UT5F24JPMGF&dib=eyJ2IjoiMSJ9.RpVRvEeyAhkostu2tfxzyROJpom6juHvNpUq-T2_GhW729K-6rr39xx2-bOzprfnAd5Is370SqiFcKXtJgW_JzEhr_1cDO-Oj7H8P9OfdbmJIs72XkcMFoJaH93pPgaoDqUCtRSacUNXgDe___5rQIz4r9QSSI4Qvpv8_mcmBvgJVyoZPa59CuElRTYhww4G4pmC9Q-APNb3M9I7AvCcO19pRym7FxpQnRfk22SzIYw.7JaNoaVMKat8L8whF1N-94l63QNAdfLmLcsflePHWwI&dib_tag=se&keywords=contos+dos+irm%C3%A3os+grimm&qid=1733835505&s=books&sprefix=contos+dos+irmaos+grim%2Cstripbooks%2C223&sr=1-2&ufe=app_do%3Aamzn1.fos.6d798eae-cadf-45de-946a-f477d47705b9" target="_blank">Veja mais -></a></button></div>
+                </div>
+                <div class="quadrado">
+                    <img src="img/Game_of_thrones.png" alt="">
+                    <div><h3>Game Of Thrones</h3></div>
+                    <div><p>Um mundo medieval, perigoso e mortal.</p></div>
+                    <div><button class="buttonquad"><a href="https://www.amazon.com.br/Guerra-dos-Tronos-Cr%C3%B4nicas-Gelo/dp/8556510787/ref=sr_1_1?crid=3VRX7N0PO21PE&dib=eyJ2IjoiMSJ9.uqs1nHIpTjTu0TddyXAkOZ_4UoMcYPPnez7-g7m3SehXDVt_HOfETTlZKZTHTy8JrW1l9qMRIWv-bz3lizog4Rp3q7TXUv5JzPuyYDmkX_PtfXBW340FH62t2Q9imTeeg5X02Mm1OMbX5JWUAZmaLUQFse31TpRRhvS-SjI6wemEWBNDzeZ6Ymiy0LBiG0i91-hckcR2DrmawOIQ4FvLeuO7EUqde49DVVS4qbVKMLY.H8XsulUrD-INY6okUzflhUAccQZnJBUpimgecWR6Gys&dib_tag=se&keywords=game+of+thrones+livros&qid=1733835541&s=books&sprefix=game+of+throne%2Cstripbooks%2C200&sr=1-1&ufe=app_do%3Aamzn1.fos.6d798eae-cadf-45de-946a-f477d47705b9" target="_blank">Veja mais -></a></button></div>
+                </div>
+                <div class="quadrado">
+                    <img src="img/it_coisa.png" alt="">
+                    <div><h3>It A Coisa</h3></div>
+                    <div><p>Fuja do palhaço assassino para sobreviver.</p></div>
+                    <div><button class="buttonquad"><a href="https://www.amazon.com.br/coisa-Stephen-King/dp/8560280944/ref=sr_1_1_sspa?__mk_pt_BR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=C0JGV7QTJ3J0&dib=eyJ2IjoiMSJ9.n3BT9zRtOgxwjzpCI0pgh5wqiQqhKg0vAvzfWspDr2QPNwgWo2GR23LfdCGlZ2TgWfGqIbAxTEts5kUdCMuN9xoRddewc2jn11XCZkMsuVDRMdXXfNBfg_5QuET9eV5XtWiv_QqyUO-875CNTp2Vlijm69WCwFVPLwynEEOShImBaWRd6mTbFEZyZ0QGTxsXchEIwSGvk4P-4zI8wXF7gaa3QXiKVPjtVqRkIeZdhdM.3eqRCbSqmbKaVGC8fIefWVNBNrxtoDA4IsLso-92QCM&dib_tag=se&keywords=it+a+coisa&qid=1733835569&s=books&sprefix=it+a+coisa%2Cstripbooks%2C196&sr=1-1-spons&ufe=app_do%3Aamzn1.fos.6d798eae-cadf-45de-946a-f477d47705b9&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&psc=1" target="_blank">Veja mais -></a></button></div>
+                </div>
+            </div>
+            <div class="divinlinecenter">
+                <div class="quadrado">
+                    <img src="img/apocalipse234.png" alt="">
+                    <div><h3>O Apocalipse Da Promessa</h3></div>
+                    <div><p>Um mundo cheio de demônios e anjos.</p></div>
+                    <div><button class="buttonquad"><a href="#">Veja mais -></a></button></div>
+                </div>
+                <div class="quadrado">
+                    <img src="img/Gravity.png" alt="">
+                    <div><h3>Gravity Falls</h3></div>
+                    <div><p>Mistérios durante o verão.</p></div>
+                    <div><button class="buttonquad"><a href="https://www.amazon.com.br/Di%C3%A1rio-Perdido-Gravity-Falls/dp/8550303623/ref=sr_1_1?crid=2NUNCATGHHNKN&dib=eyJ2IjoiMSJ9.pgGp2P_i326DawXV-QVOl1DTC_m6-DoFwR_cig-08WKxiIQP8MZ98pZB94WCwdDiceMbFHwP7JMbe4Ko-ksTiV6g3YSHvYLKlUkBHEt6rjT7fjcEo7hbevHs1M_8Z05SGgHLYW2X2CprHvMYOzPVbPgWhSeJTYNC2OKLu5IGcg1_ZXZnsGcwVhPtKA3DXF66Ywd8AN2ag-ie7jYX57xPXlZARvW5LWXypmqEKewt6P0.LjTBVgtvt8iLaeCyb8_IVTE7qsbVUrGWXqvvmaLnaKQ&dib_tag=se&keywords=gravity+falls&qid=1733835607&s=books&sprefix=gravity%2Cstripbooks%2C207&sr=1-1&ufe=app_do%3Aamzn1.fos.6d798eae-cadf-45de-946a-f477d47705b9" target="_blank">Veja mais -></a></button></div>
+                </div>
+                <div class="quadrado">
+                    <img src="img/MATRIZ.jpg" alt="">
+                    <div><h3>Matriz</h3></div>
+                    <div><p>Sair da simulação é sua única saída.</p></div>
+                    <div><button class="buttonquad"><a href="https://www.amazon.com.br/Matriz-Simula%C3%A7%C3%A3o-Voc%C3%AA-N-LARSON-ebook/dp/B0CNSHFBQL/ref=sr_1_2?__mk_pt_BR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=RWNFVRMTNUVD&dib=eyJ2IjoiMSJ9.MKscBAZb6fcMHIHZgYkDozU_83sOJ7hmGPm5yItnBHGudlOa8Eqck7JAqiZ3lBYJzgClv3s0gEg5sUl3SDaXFUaOwHq3tpXgcYF2jBaUBsRjgwlQ4wjGaC0Biinj95J6GrMUoaWSSOMcjjjQDlV6hcefvsaPjEAaI_dxc-tUSn3BdS1yS2s6tfbfzkACA2GVdzUB1jM3VOLOtWkuYWNR6axGsNy_Hhh6Hun4H--nMzk.blxaVkSr7ApF9dpei0AQG08tt2Mwd5eeDGpFUlLSMwU&dib_tag=se&keywords=matriz+livro&qid=1733836083&s=books&sprefix=matriz+livro%2Cstripbooks%2C228&sr=1-2" target="_blank">Veja mais -></a></button></div>
+                </div>
+            </div>
+            <div class="divinlinecenter">
+                <div class="quadrado">
+                    <img src="img/Narnia.jpg" alt="">
+                    <div><h3>As Crônicas De Narnia</h3></div>
+                    <div><p>Uma coletânea de aventuras.</p></div>
+                    <div><button class="buttonquad"><a href="https://www.amazon.com.br/BOX-As-Cr%C3%B4nicas-N%C3%A1rnia-Edi%C3%A7%C3%A3o/dp/6560050416/ref=asc_df_6560050416/?gad_source=1&hvadid=709883381683&hvdev=c&hvdvcmdl&hvlocint&hvlocphy=1031606&hvnetw=g&hvpone&hvpos&hvptwo&hvqmt&hvrand=6453252755642549731&hvtargid=pla-2272909650940&linkCode=df0&mcid=cc4a8a5174f03ef3a412db00c318ba68&psc=1&tag=googleshopp00-20" target="_blank">Veja mais -></a></button></div>
+                </div>
+                <div class="quadrado">
+                    <img src="img/Os_cem.jpg" alt="">
+                    <div><h3>The 100</h3></div>
+                    <div><p>Dentre todos os mundos, qual é o seu?</p></div>
+                    <div><button class="buttonquad"><a href="https://www.amazon.com.br/100-Os-escolhidos-Vol/dp/8501400599/ref=sr_1_1?__mk_pt_BR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=2PQQ9V26BEX2P&dib=eyJ2IjoiMSJ9.KVLnv1k4yJ93xFYy6phkZeJKbsjOYKvOrXzS7MzH444jn3iS7_zLzALqBxof45lQ9tX3MXJEZw6_7rnLmEgaDhElRqzqB4IsfY6xT1Fozxr87i5D_YUO25HNyoeHNi6jt1px3xl1cy3_SJ6fxSUJfgr3a2D87XWNyXUDI8T_mC0mcr0-RTzSxcYxmgpL4j24l5ZqDf-Mo3SlR9hcK28ApwNDx3ZI2LpMX4sasq3aHU8.XFsyYHWhhBgWJU1KWPIzRxOe3kmPHw5-S-V8b1cRZd0&dib_tag=se&keywords=the+100+livro&qid=1733836124&s=books&sprefix=the+100+livro%2Cstripbooks%2C384&sr=1-1&ufe=app_do%3Aamzn1.fos.6d798eae-cadf-45de-946a-f477d47705b9" target="_blank">Veja mais -></a></button></div>
+                </div>
+                <div class="quadrado">
+                    <img src="img/Livro .png" alt="">
+                    <div><h3>O Amor Da Noite</h3></div>
+                    <div><p>Um romance estilo Romeu e Julieta.</p></div>
+                    <div><button class="buttonquad"><a href="https://www.amazon.com.br/Eu-esse-meu-cora%C3%A7%C3%A3o-Hunter/dp/8555391210/ref=sr_1_1?__mk_pt_BR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=1ITLO74V329XV&dib=eyJ2IjoiMSJ9.bk_DAYrTYHtJ2aws014oHtbBEaFVFVQngJ956DgA5ho_OdLoR4XIww453BW6tequ9tfNoow8RD0goakK6V1mZAirZraoOD7VAkPqfpUuoA18NwP2EFsoelJYbhQcyzBdwKukljg2OU0hY7SFqYfTXQQRyEumdPiyFBrJYiS7PFRyUtNFIXBjgw-jbvkSUtjkCrdj51-YtT53Zcq_HBXj_g6foHgF0hkmGFjwvh8_EbE.UahrC8Cew7y0PmiBnAZYMvRwnjMhtIeUZc4SG8drdNU&dib_tag=se&keywords=romance+livro&qid=1733836166&s=books&sprefix=romance+livro%2Cstripbooks%2C251&sr=1-1" target="_blank">Veja mais -></a></button></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="paralax">
+            <div class="conteudo">
+                <h2>Nexium</h2>
+                <p>Estamos em todos os livros e vamos para todos os lugares!</p>
+            </div>
+        </section>
+
+        <h2 id="valores">Opiniões de clientes</h2>
+        <section id="idgrid" class="classgrid">
+            <div class="diamante"><img src="img/homem sorrindo.png" alt=""></div>
+            <div class="diamante"><img src="img/cachorrosorrindo.png" alt=""></div>
+            <div class="diamante"><img src="img/mulhersorrindo.png" alt=""></div>
+        </section>
+
+        <section class="sectionobjetivos">
+            <h2>Nossos valores</h2>
+            <div class="sim">
+                <table class="table table-dark table-hover">
+                    <tr>
+                        <td><p>1</p></td>
+                        <td><h4>Inovação</h4></td>
+                        <td><p>Desenvolver jogos que sejam criativos e tragam novas experiências ao público.</p></td>
+                    </tr>
+                    <tr>
+                        <td><p>2</p></td>
+                        <td><h4>Custo-Benefício</h4></td>
+                        <td><p>Explorar diferentes gêneros de jogos para alcançar públicos variados.</p></td>
+                    </tr>
+                    <tr>
+                        <td><p>3</p></td>
+                        <td><h4>Sustentabilidade</h4></td>
+                        <td><p>Adotar práticas que tenham menor impacto ambiental e sejam socialmente responsáveis.</p></td>
+                    </tr>
+                    <tr>
+                        <td><p>4</p></td>
+                        <td><h4>Parcerias</h4></td>
+                        <td><p>Colaborar com outras empresas, estúdios e criadores para ampliar o alcance.</p></td>
+                    </tr>
+                    <tr>
+                        <td><p>5</p></td>
+                        <td><h4>Acessibilidade</h4></td>
+                        <td><p>Expandir para novos mercados, alcançando jogadores de diferentes países.</p></td>
+                    </tr>
+                  </table>
+            </div>
+        </section>
+
+        <section>
+        </section>
+
+        <section id="objetivos" class="paralax2">
+            <h2>Lançamentos</h2>
+            <div class="videodiv">
+                <iframe width="2800" height="420" src="https://www.youtube.com/embed/RMmGQNNl164?si=9BOkKQhZuFQBG9ky" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <div>
+                    <h4>Stranger Things</h4>
+                    <p>A história se passa na cidade fictícia de Hawkins, Indiana, durante a década de 1980. A série começa com o desaparecimento de Will Byers, um garoto de 12 anos, e a descoberta de uma misteriosa menina chamada Eleven (Onze), que possui poderes telecinéticos. À medida que os personagens investigam, descobrem uma dimensão paralela chamada “O Mundo Invertido”, cheia de perigos e criaturas assustadoras. A série mistura elementos de cultura pop dos anos 80, como músicas, filmes e jogos, além de explorar amizades, amadurecimento e temas sobrenaturais.</p>
+                </div>
+            </div>
+            <div class="videodiv">
+                <div>
+                    <h4>Sherlock Holmes</h4>
+                    <p>Sherlock Holmes é um dos personagens mais icônicos da literatura mundial, criado por Sir Arthur Conan Doyle. Ele é um detetive fictício que protagoniza inúmeras histórias de mistério e investigação, caracterizado por sua inteligência extraordinária, lógica dedutiva impecável e observação aguçada. Holmes apareceu pela primeira vez no romance "A Study in Scarlet" (Um Estudo em Vermelho), publicado em 1887.</p>
+                </div>
+                <iframe width="2500" height="420" src="https://www.youtube.com/embed/J7nJksXDBWc?si=hS6PkB6Ub8WgN3Gu" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+        </section>
+
+        <section class="sectioncalendario">
+            <div class="calendar">
+                <div class="month">
+                  <button class="prev" onclick="changeMonth(-1)">&#10094;</button>
+                  <h1 id="month-year"></h1>
+                  <button class="next" onclick="changeMonth(1)">&#10095;</button>
+                </div>
+                <div class="weekdays">
+                  <div>Dom</div>
+                  <div>Seg</div>
+                  <div>Ter</div>
+                  <div>Qua</div>
+                  <div>Qui</div>
+                  <div>Sex</div>
+                  <div>Sáb</div>
+                </div>
+                <div class="days" id="days-container">
+                  <!-- Dias serão gerados dinamicamente -->
+                </div>
+              </div>
+              <div class="divcalendar">
+                <button class="divbuttom"><a href="#">Jogos</a></button>
+                <button class="divbuttom"><a href="#">Eventos</a></button>
+                <button class="divbuttom"><a href="#">Quem Somos</a></button>
+              </div>
+        </section>
+
+    </main>
+    <!-- Rodapé -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h2><a href="#"><span>🎮</span>Sobre</a></h2>
+                <p>Conheça nossa história e conquistas!</p>
+            </div>
+            <div class="footer-section">
+                <h2><a href="#"><span>🕹️</span>Jogos</a></h2>
+                <p>Explore nossa coleção épica de games!</p>
+            </div>
+            <div class="footer-section">
+                <h2><a href="#"><span>📞</span>Contatos</a></h2>
+                <p>Entre em contato ou nos siga nas redes.</p>
+            </div>
+            <div class="footer-section">
+                <h2><a href="#"><span>📅</span>Eventos</a></h2>
+                <p>Participe de torneios e eventos emocionantes!</p>
+            </div>
+            <div class="footer-section">
+                <h2><a href="#"><span>📜</span>Lista</a></h2>
+                <p>Descubra tudo o que temos para oferecer.</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 | Powered by <strong>Enzo Ribeiro Da Silva</strong></p>
+        </div>
+    </footer>
+</body>
+</html>

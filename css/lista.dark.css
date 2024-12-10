@@ -1,0 +1,77 @@
+.dark-mode #gridobjetivos{
+    background-color: white;
+}
+
+.dark-mode footer{
+    background-color: aliceblue;
+    color: black;
+}
+
+.calendar{
+    color: black;
+}
+
+.dark-mode #idgrid{
+    background-image: url(../img/nuvemgrid.png);
+}
+
+.dark-mode .classgrid{
+    border-radius: 10px;
+    border: 10px solid rgb(182, 134, 142);
+}
+
+.dark-mode .divinline{
+    border: 1px solid white;
+}
+
+.dark-mode .classbotao svg{
+    color: rgb(255, 253, 253);
+}
+
+.dark-mode .classbotao svg:hover{
+    color: rgb(226, 203, 203);
+}
+
+.dark-mode .button{
+    background-color: red;
+}
+
+.dark-mode .button:hover{
+    background-color: brown;
+}
+
+.dark-mode{
+    background-color: black;
+    color: white;
+}
+
+.dark-mode header{
+    background-color: white;
+    color: black;
+}
+
+.dark-mode header a{
+    color: black;
+}
+
+.dark-mode header h1{
+    color: black;
+}
+
+.dark-mode header ul li a{
+    color: black;
+}
+
+.dark-mode main{
+    color: #1a1a1a;
+    background-color: white;
+}
+
+.dark-mode .menu-toggle{
+    color: black;
+}
+
+#idicon{
+    color: black;
+
+}
