@@ -432,7 +432,7 @@ header{
 }
 
 .paralax2{
-    height: 175vh;
+    height: 125vh;
     background-image: url(../img/paralax_terror.png);
     background-attachment: fixed;
     background-position: center;
